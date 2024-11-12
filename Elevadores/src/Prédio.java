@@ -10,6 +10,7 @@ public class Prédio {
     public Prédio (int nAndares,int nElevadores ) {
         setnAndares(nAndares);
         setnElevadores(nElevadores);
+        adicionarElevadores();
     }
 
     public void setnAndares(int nAndares) {
@@ -32,6 +33,12 @@ public class Prédio {
 
     public int getnElevadores() {
         return nElevadores;
+    }
+
+    public void adicionarElevadores() {
+        for (int i = 0; i < getnElevadores(); i++) {
+            Elevadores.add(new Elevador(1, (i+1)));
+        }
     }
 
     public void andarDosElevadores() {
